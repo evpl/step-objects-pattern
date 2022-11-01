@@ -338,6 +338,17 @@ public class LoginAs implements Consumer<WebDriver> {
     }
 }
 
+public class GetTitle implements Function<WebDriver, String> {
+
+    public GetTitle() {
+    }
+
+    @Override
+    public String apply(WebDriver webDriver) {
+        return webDriver.getTitle();
+    }
+}
+
 public class AssertEquals<T> implements Consumer<T> {
     private final T expected;
 
